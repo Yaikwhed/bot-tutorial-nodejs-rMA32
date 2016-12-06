@@ -4,20 +4,29 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexKya = /(.|)*(k|K)ya!~/; botStromKya = /(S|s)trom!~/;
+      botRegexKya = /(.|)*(k|K)ya!~/; botStromKya = /(S|s)trom!~/; botWaifuAdvicefu = /(W|w)aifu?~/;
   
-  var waifuPhrases = [ "It's not like I l-like you or anything...", "_-kun is so moe!", "Do you think I'm kawaii, _?",
+  var waifuPhrases = [ "It's not like I l-like you or anything...", "_-kun is so moe!", "Do you think I'm kawaii, _-senpai?",
                       "B-B-baka!", "_-senpai is the best!", "But isn't that... lewd?", "Kemy-kun is sugoi, but not as sugoi as _-senpai!", "Noooo!",
                      "Your waifu is trashfu!", "http://i.imgur.com/8JIV2U5.png", "https://pbs.twimg.com/media/CmIzPnkUoAQAG0f.png",
                      "I could never hate you, _-kun!", "Do you really mean it, _-senpai?", "Rolls? Why do they call her Rolls?", 
                      "He's not really a mummy, is he?", "Happy waifu, happy laifu!", 
                      "http://i.imgur.com/N4fJ3.jpg",
                      "I m-made you tendies _-kun. I hope you like them...", "To me, you have all the goodboy points in the world.",
-                     "Hitler-sama did nothing wrong."]
+                     "Hitler-sama did nothing wrong."];
+  var waifuAdvices = [ "If you believe it in your heart _-kun, I'm sure it's true!", "No, baka.", "Why don't you ask your other waifu, ahou _-kun!",
+                      "Yes! Definitely!~", "Ummmmmmmmmmm... no...", "Maybe?... I don't know much about that, _-senpai.", "If it's my _-senpai asking, I'm sure of it!",
+                      "I want to say yes.... but... no. Sorry...", "https://animeviking.files.wordpress.com/2013/02/tamakomarketno.jpg",
+                      "http://images.sgcafe.net/2014/12/B6EL2czCUAADBzx.jpg", "http://i1.kym-cdn.com/photos/images/original/000/518/339/5e2.jpg"];
 
   if(request.text && botRegexKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
     this.res.writeHead(200);
     postMessage(getReturnString(waifuPhrases[getRandomInt(0,waifuPhrases.length)], request.name));
+    this.res.end();
+  }
+  if(request.text && botRegexWaifuAdvicefu.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
+    this.res.writeHead(200);
+    postMessage(getReturnString(waifuAdvices[getRandomInt(0,waifuAdvices.length)], request.name));
     this.res.end();
   }
   else if(request.text && botStromKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
