@@ -14,10 +14,7 @@ function respond() {
                      "http://i.imgur.com/N4fJ3.jpg",
                      "I m-made you tendies _-kun. I hope you like them...", "To me, you have all the goodboy points in the world.",
                      "Hitler-sama did nothing wrong."];
-  var waifuAdvices = [ "If you believe it in your heart _-kun, I'm sure it's true!", "No, baka.", "Why don't you ask your other waifu, ahou _-kun!",
-                      "Yes! Definitely!~", "Ummmmmmmmmmm... no...", "Maybe?... I don't know much about that, _-senpai.", "If it's my _-senpai asking, I'm sure of it!",
-                      "I want to say yes.... but... no. Sorry...", "https://animeviking.files.wordpress.com/2013/02/tamakomarketno.jpg",
-                      "http://images.sgcafe.net/2014/12/B6EL2czCUAADBzx.jpg", "http://i1.kym-cdn.com/photos/images/original/000/518/339/5e2.jpg"];
+  var waifuAdvices = [ "ptoato"];
 
   if(request.text && botRegexKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
     this.res.writeHead(200);
