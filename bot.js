@@ -26,7 +26,7 @@ function respond() {
   }
   else if(request.text && botWaifuAdvicefu.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
     this.res.writeHead(200);
-    postMessage(getReturnString(waifuAdvices[getRandomInt(0,waifuAdvices.length)], request.name));
+    postMessage(waifuAdvices[0]);
     this.res.end();
   }
   else if(request.text && botStromKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
