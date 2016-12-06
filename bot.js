@@ -14,7 +14,6 @@ function respond() {
                      "http://i.imgur.com/N4fJ3.jpg",
                      "I m-made you tendies _-kun. I hope you like them...", "To me, you have all the goodboy points in the world.",
                      "Hitler-sama did nothing wrong."];
-  var waifuAdvices = [ "ptoato"];
 
   if(request.text && botRegexKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
     this.res.writeHead(200);
