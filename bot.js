@@ -20,7 +20,7 @@ function respond() {
     postMessage(getReturnString(waifuPhrases[getRandomInt(0,waifuPhrases.length)], request.name));
     this.res.end();
   }
-  else if(request.text && botRegexWaifuAdvicefu.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
+  else if(request.text && botWaifuAdvicefu.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
     this.res.writeHead(200);
     postMessage("potatosss");
     this.res.end();
