@@ -23,7 +23,7 @@ function respond() {
   }
   else if(request.text && botRegexWaifuAdvicefu.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
     this.res.writeHead(200);
-    postMessage(waifuAdvices[0]);
+    postMessage("potatosss");
     this.res.end();
   }
   else if(request.text && botStromKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
