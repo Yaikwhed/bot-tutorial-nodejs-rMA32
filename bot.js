@@ -19,7 +19,7 @@ function respond() {
                       "I want to say yes.... but... no. Sorry...", "https://animeviking.files.wordpress.com/2013/02/tamakomarketno.jpg",
                       "http://images.sgcafe.net/2014/12/B6EL2czCUAADBzx.jpg", "http://i1.kym-cdn.com/photos/images/original/000/518/339/5e2.jpg"];
 
-  if(request.text && botRegexKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase())) {
+  if(request.text && botRegexKya.test(request.text) && (request.text.indexOf("@") == -1) && (request.name.toUpperCase() != "GroupMe".toUpperCase()) && (request.name != "DDoS")) {
     this.res.writeHead(200);
     postMessage(getReturnString(waifuPhrases[getRandomInt(0,waifuPhrases.length)], request.name));
     this.res.end();
