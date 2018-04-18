@@ -12,8 +12,7 @@ function respond() {
                      "I could never hate you, _-kun!", "Do you really mean it, _-senpai?", "Rolls? Why do they call her Rolls?", 
                      "He's not really a mummy, is he?", "Happy waifu, happy laifu!", 
                      "http://i.imgur.com/N4fJ3.jpg",
-                     "I m-made you tendies _-kun. I hope you like them...", "To me, you have all the goodboy points in the world.",
-                     "Hitler-sama did nothing wrong."];
+                     "I m-made you tendies _-kun. I hope you like them...", "To me, you have all the goodboy points in the world."];
   var waifuAdvices = [ "If you believe it in your heart _-kun, I'm sure it's true!", "No, baka.", "Why don't you ask your other waifu, ahou _-kun!",
                       "Yes! Definitely!~", "Ummmmmmmmmmm... no...", "Maybe?... I don't know much about that, _-senpai.", "If it's my _-senpai asking, I'm sure of it!",
                       "I want to say yes.... but... no. Sorry...", "https://animeviking.files.wordpress.com/2013/02/tamakomarketno.jpg",
